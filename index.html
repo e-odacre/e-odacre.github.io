@@ -1,26 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Evan O'Dacre - Email Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Email Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Evan O'Dacre</h1>
-        <p>Email Developer & MJML Specialist</p>
-    </header>
-    
-    <section>
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>CleanSkin Co - Email Marketing Campaign</h3>
-            <p>Created a conversion-optimized email funnel for a performance-driven skincare brand using MJML and Klaviyo.</p>
-            <a href="projects/cleanskin-co.html">View Project</a>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p>Email Developer & MJML Specialist</p>
         </div>
-    </section>
-    
-    <footer>
-        <p>Contact: evanodacre@gmail.com</p>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I'm an email developer specializing in MJML and Klaviyo integration. I create responsive, high-converting email campaigns for e-commerce and service businesses.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        Email Campaign Preview
+                    </div>
+                    <div class="project-content">
+                        <h3>CleanSkin Co - Email Marketing Campaign</h3>
+                        <p>Built a complete email funnel for men's skincare brand using MJML and Klaviyo, including welcome series and lead magnet delivery.</p>
+                        <div class="project-tags">
+                            <span class="tag">MJML</span>
+                            <span class="tag">Klaviyo</span>
+                            <span class="tag">Shopify</span>
+                        </div>
+                        <a href="projects/cleanskin-co.html" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>MJML</h4>
+                    <p>Responsive email templates</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Klaviyo</h4>
+                    <p>Email automation & flows</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Shopify</h4>
+                    <p>E-commerce integration</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Email Strategy</h4>
+                    <p>Conversion optimization</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Ready to work together?</p>
+            <p><a href="mailto:your.email@gmail.com">your.email@gmail.com</a></p>
+        </div>
     </footer>
 </body>
 </html>
