@@ -256,6 +256,45 @@ h2::after {
     left: 100%;
 }
 
+.project-image-gallery {
+    width: 100%;
+    height: 200px;
+    background: 
+        linear-gradient(45deg, #1a1a1a, #151515);
+    border-bottom: 1px solid #222;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    gap: 2px;
+}
+
+.project-image-gallery .primary-image {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+    border-right: 1px solid #333;
+}
+
+.project-image-gallery .secondary-image {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.project-card:hover .project-image-gallery .primary-image,
+.project-card:hover .project-image-gallery .secondary-image {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image-gallery .secondary-image {
+    opacity: 1;
+}
+
 .project-image {
     width: 100%;
     height: 200px;
@@ -277,6 +316,20 @@ h2::after {
     border-bottom: 1px solid #222;
     text-transform: uppercase;
     letter-spacing: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
 }
 
 .project-content {
@@ -559,10 +612,43 @@ footer a:hover {
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .project-image-gallery {
+        height: 180px;
+        flex-direction: column;
+        gap: 1px;
+    }
+    
+    .project-image-gallery .primary-image {
+        width: 100%;
+        height: 70%;
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+    
+    .project-image-gallery .secondary-image {
+        width: 100%;
+        height: 30%;
     }
     
     .about {
         padding: 40px 30px;
+    }
+    
+    .project-content {
+        padding: 25px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .btn {
+        text-align: center;
+        width: 100%;
     }
 }
 
