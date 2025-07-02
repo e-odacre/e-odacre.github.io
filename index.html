@@ -9,14 +9,35 @@
 <body>
     <header>
         <div class="container">
-            <h1>Evan O'Dacre</h1>
-            <p>Email Developer & MJML Specialist</p>
+            <div class="header-content">
+                <div class="profile-section">
+                    <img src="images/evan-profile.jpg" alt="Evan O'Dacre" class="profile-image">
+                    <div class="profile-text">
+                        <h1>Hi, I'm Evan O'Dacre</h1>
+                        <p class="headline">I design email marketing flows that boost sales for small brands</p>
+                        <p class="subheadline">Specializing in MJML + Klaviyo automation for Shopify stores</p>
+                        <div class="header-cta">
+                            <a href="https://instagram.com/evanodacre" target="_blank" class="btn btn-primary"><span>DM me on Instagram for free sample</span></a>
+                            <a href="#projects" class="btn btn-secondary"><span>See My Work</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <nav>
         <div class="container">
-            <ul>
+            <div class="nav-brand">
+                <span>Evan O'Dacre</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
+                <li><a href="#email-showcase">Email Examples</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -24,6 +45,38 @@
         </div>
     </nav>
     <main class="container">
+        <!-- Email Showcase Section -->
+        <section id="email-showcase">
+            <h2>Email Templates That Convert</h2>
+            <div class="email-preview-grid">
+                <div class="email-preview-item">
+                    <img src="https://raw.githubusercontent.com/evanodacre/lunastonejewelry/main/images/welcome-desktop.png" alt="Welcome Email Design">
+                    <div class="preview-caption">
+                        <h4>Welcome Series</h4>
+                        <p>68% open rate • Personal brand storytelling</p>
+                    </div>
+                </div>
+                <div class="email-preview-item">
+                    <img src="https://raw.githubusercontent.com/evanodacre/lunastonejewelry/main/images/education-desktop.png" alt="Education Email Design">
+                    <div class="preview-caption">
+                        <h4>Educational Content</h4>
+                        <p>61% open rate • Trust-building expertise</p>
+                    </div>
+                </div>
+                <div class="email-preview-item">
+                    <img src="https://raw.githubusercontent.com/e-odacre/cleansknco-email-campaign/main/images/welcome-desktop.png" alt="Product Email Design">
+                    <div class="preview-caption">
+                        <h4>Product Launch</h4>
+                        <p>72% open rate • Lead magnet delivery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-cta">
+                <p>Want emails like these for your brand?</p>
+                <a href="https://instagram.com/evanodacre" target="_blank" class="btn btn-primary"><span>Get Your Free Sample</span></a>
+            </div>
+        </section>
+
         <section id="about" class="about">
             <h2>About Me</h2>
             <p>I'm an email developer specializing in MJML and Klaviyo automation for e-commerce brands. I build responsive, cross-client email templates and complete automation flows that convert subscribers into customers. From welcome series to abandoned cart recovery, I create data-driven email systems that deliver measurable results for growing Shopify stores.</p>
@@ -47,7 +100,7 @@
                             <span class="tag">Email Automation</span>
                         </div>
                         <div class="project-links">
-                            <a href="projects/lunastonejewelry.html" class="btn"><span>View Project</span></a>
+                            <a href="projects/lunastonejewelry.html" class="btn"><span>View Email Templates</span></a>
                             <a href="https://lunastonejewelry.myshopify.com" target="_blank" class="btn btn-secondary"><span>Live Store</span></a>
                         </div>
                         <div class="store-password">
@@ -70,7 +123,7 @@
                             <span class="tag">Shopify</span>
                         </div>
                         <div class="project-links">
-                            <a href="projects/cleansknco.html" class="btn"><span>View Project</span></a>
+                            <a href="projects/cleansknco.html" class="btn"><span>View Email Templates</span></a>
                             <a href="https://cleansknco.myshopify.com" target="_blank" class="btn btn-secondary"><span>Live Store</span></a>
                         </div>
                         <div class="store-password">
@@ -105,9 +158,56 @@
     </main>
     <footer id="contact">
         <div class="container">
-            <p>Ready to work together?</p>
-            <p><a href="mailto:evanodacre@gmail.com">evanodacre@gmail.com</a></p>
+            <div class="footer-content">
+                <div class="footer-cta">
+                    <h3>Ready to boost your email revenue?</h3>
+                    <p>Get a free custom email sample + pricing for your brand</p>
+                    <div class="contact-buttons">
+                        <a href="https://instagram.com/evanodacre" target="_blank" class="btn btn-primary"><span>DM on Instagram</span></a>
+                        <a href="mailto:evanodacre@gmail.com" class="btn btn-secondary"><span>Send Email</span></a>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Evan O'Dacre</strong> • Email Developer</p>
+                    <p>MJML • Klaviyo • Shopify Integration</p>
+                    <p>📧 evanodacre@gmail.com</p>
+                    <p>📱 Instagram: @evanodacre</p>
+                </div>
+            </div>
         </div>
     </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
