@@ -1267,3 +1267,242 @@ header h1:hover {
         font-size: 1.4rem;
     }
 }
+
+/* ADD THIS TO THE END OF YOUR EXISTING style.css */
+
+/* Simplified Project Cards */
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: 
+        linear-gradient(45deg, #1a1a1a, #151515);
+    border-bottom: 1px solid #222;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-metrics {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.project-metrics span {
+    background: rgba(255, 119, 198, 0.1);
+    color: #ff77c6;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 119, 198, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Simplified Package Cards */
+#packages {
+    margin-bottom: 120px;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.package-card {
+    background: 
+        linear-gradient(145deg, #141414, #0f0f0f);
+    border: 1px solid #222;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.package-card.featured {
+    border-color: #ff77c6;
+    transform: scale(1.05);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 119, 198, 0.1);
+}
+
+.package-card.featured:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.package-badge {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: linear-gradient(45deg, #ff77c6, #7877c6);
+    color: #000000;
+    padding: 6px 40px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+.package-header {
+    padding: 30px 20px 15px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.package-header h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.package-price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ff77c6;
+    text-shadow: 0 0 20px rgba(255, 119, 198, 0.4);
+}
+
+.package-content {
+    padding: 25px;
+}
+
+.package-content p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.package-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.package-content li {
+    color: #ccc;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    padding-left: 25px;
+}
+
+.package-content li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff77c6;
+    font-weight: bold;
+}
+
+.package-content li:last-child {
+    border-bottom: none;
+}
+
+.package-content .btn {
+    width: 100%;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+.package-footer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.package-guarantee {
+    background: 
+        linear-gradient(145deg, #141414, #0f0f0f);
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.package-guarantee h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.package-guarantee p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive for Packages */
+@media (max-width: 768px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .package-card.featured {
+        transform: none;
+    }
+    
+    .package-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .package-header {
+        padding: 25px 15px 10px;
+    }
+    
+    .package-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .package-price {
+        font-size: 2rem;
+    }
+    
+    .package-content {
+        padding: 20px;
+    }
+    
+    .package-guarantee {
+        padding: 30px 20px;
+    }
+    
+    .package-guarantee h4 {
+        font-size: 1.2rem;
+    }
+}
