@@ -1239,3 +1239,341 @@ code {
         grid-template-columns: 1fr;
     }
 }
+
+/* ADD THIS TO YOUR projects/project-detail.css */
+
+/* Simplified Project Page Header */
+.header-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+        2px 2px 0px #ff77c6,
+        4px 4px 0px #7877c6,
+        6px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #ff77c6;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-quick-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.store-password {
+    background: rgba(255, 119, 198, 0.05);
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 119, 198, 0.2);
+    margin: 0 auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #ff77c6;
+    max-width: 200px;
+}
+
+/* Project Sections */
+.project-section {
+    margin-bottom: 80px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.overview-item {
+    background: 
+        linear-gradient(145deg, #141414, #0f0f0f);
+    padding: 25px;
+    border: 1px solid #222;
+    border-radius: 10px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.overview-item h4 {
+    color: #ff77c6;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.overview-item p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* Email Grid */
+.email-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.email-item {
+    background: 
+        linear-gradient(145deg, #141414, #0f0f0f);
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.email-item:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 119, 198, 0.1);
+}
+
+.email-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+}
+
+.email-item:hover img {
+    transform: scale(1.05);
+}
+
+.email-info {
+    padding: 20px;
+}
+
+.email-info h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.email-info p {
+    color: #aaa;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.email-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.email-stats span {
+    background: rgba(255, 119, 198, 0.1);
+    color: #ff77c6;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 119, 198, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Results Highlight */
+.results-highlight {
+    background: 
+        linear-gradient(145deg, #141414, #0f0f0f);
+    padding: 40px 30px;
+    margin: 60px 0;
+    border: 1px solid #222;
+    border-radius: 15px;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.results-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: 
+        linear-gradient(145deg, #0f0f0f, #1a1a1a);
+    border: 1px solid #222;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    border-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ff77c6;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(255, 119, 198, 0.4);
+}
+
+.stat-label {
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* Key Learnings */
+.key-learnings {
+    background: 
+        linear-gradient(145deg, #141414, #0f0f0f);
+    padding: 30px;
+    border: 1px solid #222;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.key-learnings h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.key-learnings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-learnings li {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+    position: relative;
+    padding-left: 25px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.key-learnings li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff77c6;
+    font-weight: bold;
+}
+
+.key-learnings li:last-child {
+    border-bottom: none;
+}
+
+/* CTA Options */
+.cta-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.cta-option {
+    background: 
+        linear-gradient(145deg, #0f0f0f, #1a1a1a);
+    padding: 25px;
+    border: 1px solid #222;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cta-option:hover {
+    border-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.cta-option h4 {
+    color: #ff77c6;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-option p {
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .project-quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-quick-links .btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .email-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .cta-options {
+        grid-template-columns: 1fr;
+    }
+}
