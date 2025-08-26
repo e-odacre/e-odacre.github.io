@@ -1,0 +1,134 @@
+<!-- Project Page: Grocery Store – Segmentation Project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanSkin Co. – Welcome Flow & Lead Magnet | Email Marketing Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow-sm p-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html" class="text-gray-900 underline hover:text-black">← Back to Portfolio</a>
+      <h1 class="text-3xl font-bold mt-2">CleanSkin Co. – Welcome Flow & Lead Magnet</h1>
+      <p class="text-gray-600 mt-2">Turning new subscribers into engaged customers with education and design.</p>
+    </div>
+  </header>
+  
+  <main class="max-w-3xl mx-auto p-6 space-y-8">
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Overview</h2>
+      <div>
+        <p>
+          For CleanSkin Co., a Shopify skincare brand, I built a store from a template and customized it with Liquid to align with a clean, modern aesthetic. I added a pop-up offering a <strong>free 5-step skincare guide</strong>, designed to attract subscribers and build trust from the start.
+          <br>
+          To nurture those leads, I created a 3-email welcome flow:
+        </p>
+        <ul class="list-disc list-inside pl-6">
+          <li><strong>Welcome Email + Free Guide</strong> (value-first introduction)</li>
+          <li><strong>Educational Email</strong> (skincare tips + product context)</li>
+          <li><i>Soft Sell Email</i> (gentle promotion without pressure)</li>
+        </ul>
+        <p>
+          These emails were among my most polished projects, focusing on <strong>clear copy, simple, <i>elegant design</i>, and user-centered storytelling</strong>.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Process -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Process</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Built and customized a Shopify storefront using Liquid for theme adjustments.</li>
+        <li>Designed a pop-up lead magnet for the skincare guide.</li>
+        <li>Coded MJML templates for all emails, ensuring mobile responsiveness.</li>
+        <li>Crafted copy that balanced education and subtle promotion.</li>
+        <li>Connected the flow in Klaviyo with proper triggers and testing.</li>
+      </ul>
+    </section>
+    
+    <!-- Screenshots -->
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <section x-data="{
+        open: false,
+        imgIndex: 0,
+        images: [
+            'images/SkincareStore-SegmentationProject/product-desktop.png',
+            'images/SkincareStore-SegmentationProject/welcome-desktop.png',
+            'images/SkincareStore-SegmentationProject/education-desktop.png',
+            'images/SkincareStore-SegmentationProject/landing-page.png',
+            'images/SkincareStore-SegmentationProject/popup.png',
+            'images/SkincareStore-SegmentationProject/klaviyo-flow.png',
+        ],
+        get imgSrc() { return this.images[this.imgIndex]; },
+        next() { this.imgIndex = (this.imgIndex + 1) % this.images.length; },
+        prev() { this.imgIndex = (this.imgIndex - 1 + this.images.length) % this.images.length; }
+        }"
+        x-init="
+        window.addEventListener('keydown', e => {
+            if (open) {
+            if (e.key === 'Escape') open = false;
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+            }
+        })
+        "
+        class="py-8">
+
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Screenshots</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <template x-for="(src, index) in images" :key="index">
+        <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer"
+            @click="imgIndex = index; open = true">
+            <img :src="src" :alt="'Screenshot ' + (index + 1)"
+                class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+        </div>
+        </template>
+    </div>
+
+    <!-- Lightbox -->
+    <div x-show="open"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        @click.self="open = false"
+        x-transition.opacity>
+        
+        <div class="relative">
+        <img :src="imgSrc" alt="Screenshot Preview"
+            class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+
+        <!-- Navigation -->
+        <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
+        <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
+
+        <!-- Close -->
+        <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
+        </div>
+    </div>
+
+    </section>
+    
+    <!-- Results -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Results & Learnings</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Created one of my most <strong>well-designed and copy-strong flows.</strong></li>
+        <li>Learned how to connect <strong>lead magnets to nurture sequences.</strong></li>
+        <li>Strengthened skills in balancing <strong>design + copy + timing.</strong></li>
+        <li>Reinforced the importance of guiding subscribers step-by-step before asking for a sale.</li>
+      </ul>
+      <p class="mt-4">
+        <strong>Key takeaway</strong>: The combination of value-driven content and thoughtful design can turn a simple popup into a complete customer journey.
+      </p>
+    </section>
+  </main>
+  
+  <footer class="bg-white border-t mt-12 p-4 text-center text-gray-500 text-sm">
+    © 2025 Evan O'Dacre
+  </footer>
+</body>
+</html>
