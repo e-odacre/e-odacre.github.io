@@ -8,6 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
   <header class="bg-white shadow-sm p-6">
     <div class="max-w-3xl mx-auto text-center">
       <a href="index.html" class="text-gray-900 underline hover:text-black">← Back to Portfolio</a>
@@ -15,73 +17,72 @@
       <p class="text-gray-600 mt-2">Building responsive, engaging email journeys with MJML and Klaviyo for a Shopify brand.</p>
     </div>
   </header>
-  
-  <main class="max-w-3xl mx-auto p-6 space-y-8">
+
+  <!-- Main -->
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+
     <!-- Overview -->
     <section>
       <h2 class="text-2xl font-semibold mb-4 text-center">Project Overview</h2>
       <p>
-        For Luna & Stone Jewelry, a Shopify-based lifestyle brand, I designed the **storefront and email communication system from the ground up**.  
-        After customizing the Shopify theme with Liquid, I integrated Klaviyo to implement **two automated flows**:
+        For Luna & Stone Jewelry, a Shopify-based lifestyle brand, I designed the <strong>storefront and email communication system from the ground up</strong>.  
+        After customizing the Shopify theme with Liquid, I integrated Klaviyo to implement <strong>two automated flows</strong>:
       </p>
       <ul class="list-disc list-inside pl-6 mt-2 space-y-1">
         <li><strong>Welcome Flow (3 emails)</strong>: <i>Introduction, product storytelling, social proof via customer reviews.</i></li>
         <li><strong>Abandoned Cart Flow (2 emails)</strong>: <i>Gentle reminders and urgency-based last chance messages.</i></li>
       </ul>
       <p class="mt-2">
-        All emails were hand-coded in MJML for **full responsiveness**, tested across devices, and visually styled to align with the brand’s elegant aesthetic.
+        All emails were hand-coded in MJML for <strong>full responsiveness</strong>, tested across devices, and styled to align with the brand’s elegant aesthetic.
       </p>
     </section>
-    
+
     <!-- Process -->
     <section>
       <h2 class="text-2xl font-semibold mb-4 text-center">Process</h2>
       <ul class="list-disc list-inside space-y-2 pl-6">
         <li>Built a Shopify store and added the product catalog with a custom pop-up for email capture.</li>
         <li>Coded branded MJML templates with personalized details and customer review blocks.</li>
-        <li>Planned multi-step flows that combined storytelling, education, and urgency.</li>
-        <li>Configured automation in Klaviyo, including triggers, timing, and segmentation.</li>
+        <li>Planned multi-step flows combining storytelling, education, and urgency.</li>
+        <li>Configured automation in Klaviyo including triggers, timing, and segmentation.</li>
         <li>Tested across desktop, mobile, and popular inbox clients to ensure consistency and deliverability.</li>
       </ul>
     </section>
-    
+
     <!-- Screenshots -->
-    <!-- Alpine.js -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <section x-data="{
         open: false,
         imgIndex: 0,
         images: [
-            'images/LunaStoneEmailFlows/welcome-desktop.png',
-            'images/LunaStoneEmailFlows/abandoned-cart-1-desktop.png',
-            'images/LunaStoneEmailFlows/abandoned-cart-2-desktop.png',
-            'images/LunaStoneEmailFlows/education-desktop.png',
-            'images/LunaStoneEmailFlows/social-desktop.png',
-            'images/LunaStoneEmailFlows/promo-flow.png',
-            'images/LunaStoneEmailFlows/abandoned-cart-flow.png',
-            'images/LunaStoneEmailFlows/popup.png',
-            'images/LunaStoneEmailFlows/store-1.png',
-            'images/LunaStoneEmailFlows/store-2.png',
-            'images/LunaStoneEmailFlows/store-3.png',
-            'images/LunaStoneEmailFlows/store-4.png'
+          'images/LunaStoneEmailFlows/welcome-desktop.png',
+          'images/LunaStoneEmailFlows/abandoned-cart-1-desktop.png',
+          'images/LunaStoneEmailFlows/abandoned-cart-2-desktop.png',
+          'images/LunaStoneEmailFlows/education-desktop.png',
+          'images/LunaStoneEmailFlows/social-desktop.png',
+          'images/LunaStoneEmailFlows/promo-flow.png',
+          'images/LunaStoneEmailFlows/abandoned-cart-flow.png',
+          'images/LunaStoneEmailFlows/popup.png',
+          'images/LunaStoneEmailFlows/store-1.png',
+          'images/LunaStoneEmailFlows/store-2.png',
+          'images/LunaStoneEmailFlows/store-3.png',
+          'images/LunaStoneEmailFlows/store-4.png'
         ],
         get imgSrc() { return this.images[this.imgIndex]; },
         next() { this.imgIndex = (this.imgIndex + 1) % this.images.length; },
         prev() { this.imgIndex = (this.imgIndex - 1 + this.images.length) % this.images.length; }
-        }"
-        x-init="
+      }"
+      x-init="
         window.addEventListener('keydown', e => {
-            if (open) {
+          if (open) {
             if (e.key === 'Escape') open = false;
             if (e.key === 'ArrowRight') next();
             if (e.key === 'ArrowLeft') prev();
-            }
+          }
         })
-        "
-        class="py-8">
-      
+      "
+      class="py-8"
+    >
       <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Screenshots</h2>
-
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <template x-for="(src, index) in images" :key="index">
           <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer"
@@ -100,32 +101,34 @@
         <div class="relative">
           <img :src="imgSrc" alt="Screenshot Preview"
                class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
-          <!-- Navigation -->
           <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
           <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
-          <!-- Close -->
           <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
         </div>
       </div>
     </section>
-    
+
     <!-- Results -->
     <section>
       <h2 class="text-2xl font-semibold mb-4 text-center">Results & Learnings</h2>
       <ul class="list-disc list-inside space-y-1 pl-6">
-        <li>Delivered a complete **customer journey** with automated flows, reinforcing brand voice and engagement.</li>
-        <li>Applied **personalization and social proof** in emails to increase open and click-through potential.</li>
+        <li>Delivered a complete <strong>customer journey</strong> with automated flows, reinforcing brand voice and engagement.</li>
+        <li>Applied <strong>personalization and social proof</strong> in emails to increase open and click-through potential.</li>
         <li>Enhanced MJML coding efficiency compared to previous projects.</li>
-        <li>Gained experience building a **full Shopify + email ecosystem** from scratch.</li>
+        <li>Gained experience building a <strong>full Shopify + email ecosystem</strong> from scratch.</li>
       </ul>
       <p class="mt-4">
-        <strong>Key takeaway:</strong> Campaigns succeed when **design, messaging, and segmentation** work together — even small A/B improvements can have a big cumulative effect.
+        <strong>Key takeaway:</strong> Campaigns succeed when <strong>design, messaging, and segmentation</strong> work together — even small A/B improvements can have a big cumulative effect.
       </p>
     </section>
+
   </main>
-  
+
+  <!-- Footer -->
   <footer class="bg-white border-t mt-12 p-4 text-center text-gray-500 text-sm">
     © 2025 Evan O'Dacre
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 </html>
