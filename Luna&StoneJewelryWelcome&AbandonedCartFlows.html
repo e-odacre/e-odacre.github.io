@@ -1,71 +1,69 @@
-<!-- Project Page: Clothing Brand – Seasonal Campaigns -->
+<!-- Project Page: Luna & Stone Jewelry – Welcome & Abandoned Cart Flows -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luna & Stone Jewelry – Welcome & Abandoned Cart Flows | Email Marketing Project</title>
+  <title>Luna & Stone Jewelry – Email Flows | Portfolio Project</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
   <header class="bg-white shadow-sm p-6">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-3xl mx-auto text-center">
       <a href="index.html" class="text-gray-900 underline hover:text-black">← Back to Portfolio</a>
       <h1 class="text-3xl font-bold mt-2">Luna & Stone Jewelry – Welcome & Abandoned Cart Flows</h1>
-      <p class="text-gray-600 mt-2">Building personalized email journeys with MJML and Klaviyo.</p>
+      <p class="text-gray-600 mt-2">Building responsive, engaging email journeys with MJML and Klaviyo for a Shopify brand.</p>
     </div>
   </header>
   
   <main class="max-w-3xl mx-auto p-6 space-y-8">
     <!-- Overview -->
     <section>
-      <h2 class="text-2xl font-semibold mb-4">Overview</h2>
-      <div>
-        <p>
-          For Luna & Stone Jewelry, a Shopify-based brand, I built both the storefront and customer communication system from the ground up. After setting up the Shopify store and customizing the theme with Liquid, I integrated Klaviyo to design <strong>two automated flows</strong>:
-        </p>
-        <ul class="list-disc list-inside pl-6">
-          <li><strong>Welcome Flow (3 emails)</strong>: <i>Welcome, Education/Product Story, Social Proof with Reviews.</i></li>
-          <li><strong>Abandoned Cart Flow (2 emails)</strong>: <i>Reminder and Last Chance urgency email.</i></li>
-        </ul>
-        <p>
-          All emails were coded in MJML for responsiveness, tested across devices, and styled to align with the brand’s elegant aesthetic.
-        </p>
-      </div>
+      <h2 class="text-2xl font-semibold mb-4 text-center">Project Overview</h2>
+      <p>
+        For Luna & Stone Jewelry, a Shopify-based lifestyle brand, I designed the **storefront and email communication system from the ground up**.  
+        After customizing the Shopify theme with Liquid, I integrated Klaviyo to implement **two automated flows**:
+      </p>
+      <ul class="list-disc list-inside pl-6 mt-2 space-y-1">
+        <li><strong>Welcome Flow (3 emails)</strong>: <i>Introduction, product storytelling, social proof via customer reviews.</i></li>
+        <li><strong>Abandoned Cart Flow (2 emails)</strong>: <i>Gentle reminders and urgency-based last chance messages.</i></li>
+      </ul>
+      <p class="mt-2">
+        All emails were hand-coded in MJML for **full responsiveness**, tested across devices, and visually styled to align with the brand’s elegant aesthetic.
+      </p>
     </section>
     
     <!-- Process -->
     <section>
-      <h2 class="text-2xl font-semibold mb-4">Process</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Built a Shopify store and added product catalog with a custom pop-up form for email capture.</li>
+      <h2 class="text-2xl font-semibold mb-4 text-center">Process</h2>
+      <ul class="list-disc list-inside space-y-2 pl-6">
+        <li>Built a Shopify store and added the product catalog with a custom pop-up for email capture.</li>
         <li>Coded branded MJML templates with personalized details and customer review blocks.</li>
         <li>Planned multi-step flows that combined storytelling, education, and urgency.</li>
-        <li>Set up automation in Klaviyo with triggers, timing, and segmentation.</li>
-        <li>QA tested across desktop, mobile, and popular inboxes to ensure consistency.</li>
+        <li>Configured automation in Klaviyo, including triggers, timing, and segmentation.</li>
+        <li>Tested across desktop, mobile, and popular inbox clients to ensure consistency and deliverability.</li>
       </ul>
     </section>
     
     <!-- Screenshots -->
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
     <section x-data="{
         open: false,
         imgIndex: 0,
         images: [
-            'images/JewelryBrandSeasonalCampaigns/welcome-desktop.png',
-            'images/JewelryBrandSeasonalCampaigns/abandoned-cart-1-desktop.png',
-            'images/JewelryBrandSeasonalCampaigns/abandoned-cart-2-desktop.png',
-            'images/JewelryBrandSeasonalCampaigns/education-desktop.png',
-            'images/JewelryBrandSeasonalCampaigns/social-desktop.png',
-            'images/JewelryBrandSeasonalCampaigns/promo-flow.png',
-            'images/JewelryBrandSeasonalCampaigns/abandoned-cart-flow.png',
-            'images/JewelryBrandSeasonalCampaigns/popup.png',
-            'images/JewelryBrandSeasonalCampaigns/store-1.png',
-            'images/JewelryBrandSeasonalCampaigns/store-2.png',
-            'images/JewelryBrandSeasonalCampaigns/store-3.png',
-            'images/JewelryBrandSeasonalCampaigns/store-4.png',
+            'images/LunaStoneEmailFlows/welcome-desktop.png',
+            'images/LunaStoneEmailFlows/abandoned-cart-1-desktop.png',
+            'images/LunaStoneEmailFlows/abandoned-cart-2-desktop.png',
+            'images/LunaStoneEmailFlows/education-desktop.png',
+            'images/LunaStoneEmailFlows/social-desktop.png',
+            'images/LunaStoneEmailFlows/promo-flow.png',
+            'images/LunaStoneEmailFlows/abandoned-cart-flow.png',
+            'images/LunaStoneEmailFlows/popup.png',
+            'images/LunaStoneEmailFlows/store-1.png',
+            'images/LunaStoneEmailFlows/store-2.png',
+            'images/LunaStoneEmailFlows/store-3.png',
+            'images/LunaStoneEmailFlows/store-4.png'
         ],
         get imgSrc() { return this.images[this.imgIndex]; },
         next() { this.imgIndex = (this.imgIndex + 1) % this.images.length; },
@@ -81,51 +79,47 @@
         })
         "
         class="py-8">
+      
+      <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Screenshots</h2>
 
-    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Screenshots</h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <template x-for="(src, index) in images" :key="index">
-        <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer"
-            @click="imgIndex = index; open = true">
-            <img :src="src" :alt="'Screenshot ' + (index + 1)"
-                class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
-        </div>
+          <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer"
+               @click="imgIndex = index; open = true">
+            <img :src="src" :alt="'Luna & Stone Jewelry email screenshot ' + (index + 1)"
+                 class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+          </div>
         </template>
-    </div>
+      </div>
 
-    <!-- Lightbox -->
-    <div x-show="open"
-        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-        @click.self="open = false"
-        x-transition.opacity>
-        
+      <!-- Lightbox -->
+      <div x-show="open"
+           class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+           @click.self="open = false"
+           x-transition.opacity>
         <div class="relative">
-        <img :src="imgSrc" alt="Screenshot Preview"
-            class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
-
-        <!-- Navigation -->
-        <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
-        <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
-
-        <!-- Close -->
-        <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
+          <img :src="imgSrc" alt="Screenshot Preview"
+               class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+          <!-- Navigation -->
+          <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
+          <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
+          <!-- Close -->
+          <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
         </div>
-    </div>
-
+      </div>
     </section>
     
     <!-- Results -->
     <section>
-      <h2 class="text-2xl font-semibold mb-4">Results & Learnings</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Delivered a complete customer journey with automated flows.</li>
-        <li>Learned how to blend personalization with automation (e.g., using customer reviews for social proof).</li>
-        <li>Improved efficiency and confidence coding MJML compared to my first project.</li>
-        <li>Gained experience building an email + Shopify ecosystem from scratch.</li>
+      <h2 class="text-2xl font-semibold mb-4 text-center">Results & Learnings</h2>
+      <ul class="list-disc list-inside space-y-1 pl-6">
+        <li>Delivered a complete **customer journey** with automated flows, reinforcing brand voice and engagement.</li>
+        <li>Applied **personalization and social proof** in emails to increase open and click-through potential.</li>
+        <li>Enhanced MJML coding efficiency compared to previous projects.</li>
+        <li>Gained experience building a **full Shopify + email ecosystem** from scratch.</li>
       </ul>
       <p class="mt-4">
-        <strong>What I learned:</strong> Campaigns thrive when they balance design, messaging, and segmentation — and small A/B test improvements compound into major results.
+        <strong>Key takeaway:</strong> Campaigns succeed when **design, messaging, and segmentation** work together — even small A/B improvements can have a big cumulative effect.
       </p>
     </section>
   </main>
