@@ -1,4 +1,3 @@
-<!-- Project Page: Candle Shop – Automated Flows -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,117 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fable Nest – Spring Campaign Launch | Email Marketing Project</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <header class="bg-white shadow-sm p-6">
-    <div class="max-w-3xl mx-auto">
-      <a href="index.html" class="text-gray-900 underline hover:text-black">← Back to Portfolio</a>
-      <h1 class="text-3xl font-bold mt-2">Fable Nest – Spring Campaign Launch</h1>
-      <p class="text-gray-600 mt-2">Seasonal email campaign & Shopify buildout for a lifestyle brand.</p>
+<body class="bg-[#fffdf7] text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-[#fffdf7] shadow-sm p-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <a href="index.html" class="text-gray-900 underline hover:text-black block mb-4">← Back to Portfolio</a>
+      <h1 class="text-3xl font-bold">Fable Nest – Spring Campaign Launch</h1>
+      <p class="text-gray-700 mt-2">3-email seasonal campaign built with MJML, Klaviyo, and copywriting focused on storytelling + conversions.</p>
     </div>
   </header>
-  
-  <main class="max-w-3xl mx-auto p-6 space-y-8">
+
+  <!-- Main -->
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+
     <!-- Overview -->
-    <section>
+    <section class="text-center">
       <h2 class="text-2xl font-semibold mb-4">Overview</h2>
-      <p>
-        I designed and launched a <strong>3-email spring campaign</strong> for Fable Nest, a Shopify store selling candles, textiles, décor, and gift bundles. The campaign — <i>Spring Story Begins, Spring Drop, and Last Chance</i> — was coded in MJML, integrated into Klaviyo, and supported by a Shopify pop-up for lead capture.
-        This project demonstrated my ability to manage the <strong>full pipeline</strong>: from <strong>Shopify setup and theme customization</strong> (Liquid), to <strong>Klaviyo integration and campaign execution</strong>, to ensuring emails rendered consistently across devices.
+      <p class="leading-relaxed">
+        I created a <strong>3-part spring campaign</strong> for Fable Nest, a lifestyle brand offering candles, décor, and gift bundles. The sequence — <em>Spring Story Begins</em>, <em>Spring Drop</em>, and <em>Last Chance</em> — was hand-coded in MJML, tested across clients, and launched through Klaviyo.  
+        <br><br>
+        This project blended <strong>visual design, responsive development, and narrative copywriting</strong> to capture the feeling of spring renewal while driving product engagement.
       </p>
     </section>
-    
+
     <!-- Process -->
-    <section>
+    <section class="text-center">
       <h2 class="text-2xl font-semibold mb-4">Process</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>Created a Shopify store with product listings and customized theme elements using Liquid.</li>
-        <li>Built and styled a pop-up to capture new subscribers.</li>
-        <li>Planned and wrote a 3-email campaign journey: <strong>storytelling → product showcase → final push.</strong></li>
-        <li>Hand-coded responsive MJML templates and exported to Klaviyo.</li>
-        <li>Scheduled and tested campaign delivery, optimizing for both desktop and mobile clients.</li>
+      <ul class="list-disc list-inside space-y-2 text-left max-w-lg mx-auto">
+        <li>Mapped out the customer journey: <strong>storytelling → showcase → urgency.</strong></li>
+        <li>Wrote email copy that combined lifestyle imagery with clear CTAs.</li>
+        <li>Coded responsive MJML templates and tested across devices & clients.</li>
+        <li>Integrated into Klaviyo and scheduled delivery for optimal timing.</li>
+        <li>Designed a Shopify pop-up to grow the list alongside the campaign.</li>
       </ul>
     </section>
-    
-    <!-- Screenshots -->
-    <!-- Alpine.js -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
+    <!-- Screenshots -->
     <section x-data="{
         open: false,
         imgIndex: 0,
         images: [
-            'images/CandleShop-AutomatedFlows/campaign.png',
-            'images/CandleShop-AutomatedFlows/landing-page.png',
-            'images/CandleShop-AutomatedFlows/popup.png'
+          'images/CandleShop-AutomatedFlows/campaign.png',
+          'images/CandleShop-AutomatedFlows/landing-page.png',
+          'images/CandleShop-AutomatedFlows/popup.png'
         ],
         get imgSrc() { return this.images[this.imgIndex]; },
         next() { this.imgIndex = (this.imgIndex + 1) % this.images.length; },
         prev() { this.imgIndex = (this.imgIndex - 1 + this.images.length) % this.images.length; }
-        }"
-        x-init="
+      }"
+      x-init="
         window.addEventListener('keydown', e => {
-            if (open) {
+          if (open) {
             if (e.key === 'Escape') open = false;
             if (e.key === 'ArrowRight') next();
             if (e.key === 'ArrowLeft') prev();
-            }
+          }
         })
-        "
-        class="py-8">
+      "
+      class="py-8 text-center">
 
-    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Screenshots</h2>
+      <h2 class="text-2xl font-semibold mb-6">Screenshots</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <template x-for="(src, index) in images" :key="index">
-        <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer"
+          <div class="overflow-hidden rounded-lg shadow-md cursor-pointer"
             @click="imgIndex = index; open = true">
             <img :src="src" :alt="'Screenshot ' + (index + 1)"
-                class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
-        </div>
+              class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+          </div>
         </template>
-    </div>
+      </div>
 
-    <!-- Lightbox -->
-    <div x-show="open"
+      <!-- Lightbox -->
+      <div x-show="open"
         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
         @click.self="open = false"
         x-transition.opacity>
-        
         <div class="relative">
-        <img :src="imgSrc" alt="Screenshot Preview"
+          <img :src="imgSrc" alt="Screenshot Preview"
             class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
-
-        <!-- Navigation -->
-        <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
-        <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
-
-        <!-- Close -->
-        <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
+          <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
+          <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
+          <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
         </div>
-    </div>
-
+      </div>
     </section>
-    
+
     <!-- Results -->
-    <section>
+    <section class="text-center">
       <h2 class="text-2xl font-semibold mb-4">Results & Learnings</h2>
-      <p>
-        By comparing performance to a single-email welcome, this project demonstrated:  
-        <ul class="list-disc list-inside mt-2 space-y-1">
-          <li>Built a fully functioning Shopify demo store integrated with Klaviyo.</li>
-          <li>Created a multi-touch seasonal campaign showcasing both design and automation skills.</li>
-          <li>Learned the value of balancing <strong>storytelling with clear calls-to-action.</strong></li>
-          <li>Gained hands-on experience combining Shopify, Klaviyo, MJML, and Liquid in one project.</li>
-        </ul>
-      </p>
+      <ul class="list-disc list-inside space-y-2 text-left max-w-lg mx-auto">
+        <li>Built a fully functional demo Shopify store integrated with Klaviyo.</li>
+        <li>Delivered a <strong>multi-touch seasonal campaign</strong> instead of a single blast.</li>
+        <li>Balanced storytelling with <strong>persuasive CTAs</strong> for stronger engagement.</li>
+        <li>Gained practical experience combining <strong>MJML, Klaviyo, and Shopify</strong> into one cohesive workflow.</li>
+      </ul>
       <p class="mt-4">
-        <strong>What I learned:</strong> multi-step flows build stronger trust than one-off campaigns, and timing + segmentation are just as important as design.
+        <strong>Key takeaway:</strong> Multi-step campaigns deepen brand connection, while timing + copy matter as much as design.
       </p>
     </section>
   </main>
-  
-  <footer class="bg-white border-t mt-12 p-4 text-center text-gray-500 text-sm">
+
+  <!-- Footer -->
+  <footer class="bg-[#fffdf7] border-t mt-12 p-4 text-center text-gray-500 text-sm">
     © 2025 Evan O'Dacre
   </footer>
 </body>
