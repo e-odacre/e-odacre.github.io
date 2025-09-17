@@ -10,7 +10,7 @@
 <body class="bg-[#fffdf7] text-gray-800 font-sans">
   <!-- Header -->
   <header class="bg-[#fffdf7] shadow-sm p-6">
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="max-w-3xl mx-auto">
       <a href="index.html" class="text-gray-900 underline hover:text-black block mb-4">← Back to Portfolio</a>
       <h1 class="text-3xl font-bold">Fable Nest – Spring Campaign Launch</h1>
       <p class="text-gray-700 mt-2">3-email seasonal campaign built with MJML, Klaviyo, and copywriting focused on storytelling + conversions.</p>
@@ -18,7 +18,7 @@
   </header>
 
   <!-- Main -->
-  <main class="max-w-3xl mx-auto p-6 space-y-12 text-center">
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
 
     <!-- Overview -->
     <section>
@@ -33,7 +33,7 @@
     <!-- Process -->
     <section>
       <h2 class="text-2xl font-semibold mb-4">Process</h2>
-      <ul class="list-disc list-inside space-y-2 text-left max-w-lg mx-auto">
+      <ul class="list-disc list-inside space-y-2">
         <li>Mapped out the customer journey: <strong>storytelling → showcase → urgency.</strong></li>
         <li>Wrote email copy that combined lifestyle imagery with clear CTAs.</li>
         <li>Coded responsive MJML templates and tested across devices & clients.</li>
@@ -43,8 +43,7 @@
     </section>
 
     <!-- Screenshots -->
-    <section 
-      x-data="{
+    <section x-data="{
         open: false,
         imgIndex: 0,
         images: [
@@ -65,11 +64,11 @@
           }
         })
       "
-      class="py-8 text-center"
-    >
+      class="py-8">
+
       <h2 class="text-2xl font-semibold mb-6">Screenshots</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <template x-for="(src, index) in images" :key="index">
           <div class="overflow-hidden rounded-lg shadow-md cursor-pointer"
             @click="imgIndex = index; open = true">
@@ -97,7 +96,7 @@
     <!-- Results -->
     <section>
       <h2 class="text-2xl font-semibold mb-4">Results & Learnings</h2>
-      <ul class="list-disc list-inside space-y-2 text-left max-w-lg mx-auto">
+      <ul class="list-disc list-inside space-y-2">
         <li>Built a fully functional demo Shopify store integrated with Klaviyo.</li>
         <li>Delivered a <strong>multi-touch seasonal campaign</strong> instead of a single blast.</li>
         <li>Balanced storytelling with <strong>persuasive CTAs</strong> for stronger engagement.</li>
