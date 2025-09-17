@@ -18,10 +18,10 @@
   </header>
 
   <!-- Main -->
-  <main class="max-w-3xl mx-auto p-6 space-y-12">
+  <main class="max-w-3xl mx-auto p-6 space-y-12 text-center">
 
     <!-- Overview -->
-    <section class="text-center">
+    <section>
       <h2 class="text-2xl font-semibold mb-4">Overview</h2>
       <p class="leading-relaxed">
         I created a <strong>3-part spring campaign</strong> for Fable Nest, a lifestyle brand offering candles, décor, and gift bundles. The sequence — <em>Spring Story Begins</em>, <em>Spring Drop</em>, and <em>Last Chance</em> — was hand-coded in MJML, tested across clients, and launched through Klaviyo.  
@@ -31,7 +31,7 @@
     </section>
 
     <!-- Process -->
-    <section class="text-center">
+    <section>
       <h2 class="text-2xl font-semibold mb-4">Process</h2>
       <ul class="list-disc list-inside space-y-2 text-left max-w-lg mx-auto">
         <li>Mapped out the customer journey: <strong>storytelling → showcase → urgency.</strong></li>
@@ -43,7 +43,8 @@
     </section>
 
     <!-- Screenshots -->
-    <section x-data="{
+    <section 
+      x-data="{
         open: false,
         imgIndex: 0,
         images: [
@@ -64,11 +65,11 @@
           }
         })
       "
-      class="py-8 text-center">
-
+      class="py-8 text-center"
+    >
       <h2 class="text-2xl font-semibold mb-6">Screenshots</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
         <template x-for="(src, index) in images" :key="index">
           <div class="overflow-hidden rounded-lg shadow-md cursor-pointer"
             @click="imgIndex = index; open = true">
@@ -94,7 +95,7 @@
     </section>
 
     <!-- Results -->
-    <section class="text-center">
+    <section>
       <h2 class="text-2xl font-semibold mb-4">Results & Learnings</h2>
       <ul class="list-disc list-inside space-y-2 text-left max-w-lg mx-auto">
         <li>Built a fully functional demo Shopify store integrated with Klaviyo.</li>
