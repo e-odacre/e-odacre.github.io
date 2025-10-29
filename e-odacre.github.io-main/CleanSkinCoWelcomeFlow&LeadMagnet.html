@@ -1,0 +1,145 @@
+<!-- Project Page: CleanSkin Co. – Welcome Flow & Lead Magnet -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanSkin Co. – Welcome Flow & Lead Magnet | Email Marketing Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fdfcf7] text-gray-800 font-serif leading-relaxed">
+  <header class="bg-[#fdfcf7] border-b border-gray-200 p-6 shadow-sm">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html" class="text-gray-700 underline hover:text-black">← Back to Portfolio</a>
+      <h1 class="text-3xl font-bold mt-2">CleanSkin Co. – Welcome Flow & Lead Magnet</h1>
+      <p class="text-gray-600 mt-2 italic">Turning new subscribers into engaged customers with education and design.</p>
+    </div>
+  </header>
+  
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4 border-b border-gray-300 pb-1">Overview</h2>
+      <p>
+        For <strong>CleanSkin Co.</strong>, a Shopify skincare brand, I built a storefront from a template and customized it with Liquid to match a clean, minimal aesthetic.  
+        To build trust immediately, I added a pop-up offering a <strong>free 5-step skincare guide</strong>. This became the centerpiece of a nurturing <strong>3-email welcome flow</strong>:
+      </p>
+      <ul class="list-disc list-inside mt-3 space-y-1">
+        <li><strong>Welcome Email + Free Guide</strong> — value-first introduction.</li>
+        <li><strong>Educational Email</strong> — skincare tips framed with product context.</li>
+        <li><em>Soft Sell Email</em> — gentle promotion without pressure.</li>
+      </ul>
+      <p class="mt-4">
+        These emails combined <strong>polished copy, elegant design, and user-focused storytelling</strong>—making them one of my most refined projects.
+      </p>
+    </section>
+    
+    <!-- Process -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4 border-b border-gray-300 pb-1">Process</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Built and customized a Shopify storefront using Liquid.</li>
+        <li>Designed a lead magnet popup offering the skincare guide.</li>
+        <li>Coded responsive MJML email templates for the entire flow.</li>
+        <li>Balanced education-driven copy with subtle product promotion.</li>
+        <li>Connected the flow in Klaviyo, set up triggers, and tested delivery.</li>
+      </ul>
+    </section>
+    
+    <!-- Screenshots -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <section x-data="{
+        open: false,
+        imgIndex: 0,
+        images: [
+            'images/SkincareStore-SegmentationProject/product-desktop.png',
+            'images/SkincareStore-SegmentationProject/welcome-desktop.png',
+            'images/SkincareStore-SegmentationProject/education-desktop.png',
+            'images/SkincareStore-SegmentationProject/landing-page.png',
+            'images/SkincareStore-SegmentationProject/popup.png',
+            'images/SkincareStore-SegmentationProject/klaviyo-flow.png',
+            'images/SkincareStore-SegmentationProject/education_2.png',
+        ],
+        get imgSrc() { return this.images[this.imgIndex]; },
+        next() { this.imgIndex = (this.imgIndex + 1) % this.images.length; },
+        prev() { this.imgIndex = (this.imgIndex - 1 + this.images.length) % this.images.length; }
+        }"
+        x-init="
+        window.addEventListener('keydown', e => {
+            if (open) {
+            if (e.key === 'Escape') open = false;
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+            }
+        })
+        "
+        class="py-8">
+
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-1">Screenshots</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <template x-for="(src, index) in images" :key="index">
+          <div class="overflow-hidden rounded-lg shadow-lg cursor-pointer"
+              @click="imgIndex = index; open = true">
+              <img :src="src" :alt="'Screenshot ' + (index + 1)"
+                  class="object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+          </div>
+          </template>
+      </div>
+
+      <!-- Lightbox -->
+      <div x-show="open"
+          class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          @click.self="open = false"
+          x-transition.opacity>
+          
+          <div class="relative">
+          <img :src="imgSrc" alt="Screenshot Preview"
+              class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+
+          <!-- Navigation -->
+          <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
+          <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
+
+          <!-- Close -->
+          <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
+          </div>
+      </div>
+    </section>
+    
+    <!-- Results -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4 border-b border-gray-300 pb-1">Results & Learnings</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Produced one of my most <strong>well-written and design-forward flows</strong>.</li>
+        <li>Learned to connect <strong>lead magnets to nurturing sequences</strong> effectively.</li>
+        <li>Strengthened my approach to balancing <strong>copy, design, and timing</strong>.</li>
+        <li>Proved the importance of guiding subscribers step-by-step before presenting an offer.</li>
+      </ul>
+      <p class="mt-4">
+        <strong>Key takeaway:</strong> Thoughtful storytelling, paired with design and timing, transforms a simple pop-up into the start of a customer journey.
+      </p>
+    </section>
+    <!-- GitHub: View project code (with icon) -->
+    <section class="max-w-3xl mx-auto p-6 mt-12 text-left border-t border-gray-300">
+      <h2 class="text-2xl font-semibold mb-2">View the code</h2>
+      <p class="text-gray-700 mb-4">Open the repo to see MJML templates, email assets, and implementation notes.</p>
+      <a href="https://github.com/e-odacre/cleansknco-email-campaign"
+        target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-2 rounded-lg shadow hover:bg-gray-800 transition-colors duration-200"
+        aria-label="Open project repository on GitHub">
+        <!-- GitHub SVG -->
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.2 9.13 7.64 10.61.56.1.76-.24.76-.53 0-.26-.01-1-.02-1.96-3.11.68-3.77-1.34-3.77-1.34-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.16-3.01-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.12 1.15a10.76 10.76 0 012.84-.38c.96.01 1.93.13 2.84.38 2.17-1.45 3.12-1.15 3.12-1.15.61 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.01 0 4.29-2.62 5.24-5.11 5.51.4.35.76 1.04.76 2.1 0 1.52-.01 2.75-.01 3.12 0 .29.2.64.77.53A11.26 11.26 0 0023.25 11.75C23.25 5.48 18.27.5 12 .5z"/>
+        </svg>
+        View on GitHub
+      </a>
+    </section>
+  </main>
+  
+  <footer class="bg-[#fdfcf7] border-t mt-12 p-4 text-center text-gray-500 text-sm">
+    © 2025 Evan O'Dacre
+  </footer>
+</body>
+</html>
