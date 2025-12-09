@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fiihii – Full Cyber Monday Email Campaign | Evan O'Dacre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-[#fffdf7] text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-[#fffdf7] shadow-sm p-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html" class="text-gray-900 underline hover:text-black block mb-4">← Back to Portfolio</a>
+      <h1 class="text-3xl font-bold">Fiihii – Full Cyber Monday Email Campaign</h1>
+      <p class="text-gray-700 mt-2">Strategy-led, copy-forward 5-email sequence (Teaser → Launch → Hard Push → Last Call → Extension). Design, copy, and production-ready MJML/HTML templates for e-commerce subscription conversions.</p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+
+    <!-- Project Summary -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Project Snapshot</h2>
+      <p class="leading-relaxed">
+        Fiihii is a functional smoothie brand focused on gut health. I built a conversion-first Cyber Monday campaign that combined brand-aligned design, conversion copywriting, and robust email-development practices. The deliverables included five responsive templates coded in MJML and exported to production-ready HTML, with visual assets and a deployment strategy designed for list health and deliverability.
+      </p>
+
+      <div class="mt-4 space-y-2 text-sm text-gray-700">
+        <div><strong>Role:</strong> Email Designer, Copywriter & Developer</div>
+        <div><strong>Tools:</strong> Figma → MJML → HTML/CSS, Klaviyo/Mailchimp-ready templates</div>
+        <div><strong>Deliverables:</strong> 5 responsive email templates, design assets, copy deck, implementation notes</div>
+        <div><strong>Project length:</strong> ~1 week (strategy, design, copy, code)</div>
+      </div>
+    </section>
+
+    <!-- Timeline & Strategy -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Send Timeline & Strategy</h2>
+
+      <p class="leading-relaxed mb-4">
+        The sequence was designed to maximize conversions while protecting list health. Key tactics included segmentation by early engagement (teaser opens/clicks), targeted suppressions to avoid over-mailing, and progressive urgency in the final sends.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="p-4 bg-[#f6f4ef] rounded-lg shadow-sm">
+          <h3 class="font-semibold mb-2">Email 1 — Teaser</h3>
+          <p class="text-sm">Send: <strong>Sunday evening</strong>. Goal: build anticipation and identify high-intent contacts via opens & clicks for targeted follow-ups.</p>
+        </div>
+        <div class="p-4 bg-[#f6f4ef] rounded-lg shadow-sm">
+          <h3 class="font-semibold mb-2">Email 2 — Launch</h3>
+          <p class="text-sm">Send: <strong>Monday morning (prime time)</strong>. Sent only to teaser-engaged contacts (suppression strategy). Goal: drive initial conversions with the core subscription offer.</p>
+        </div>
+        <div class="p-4 bg-[#f6f4ef] rounded-lg shadow-sm">
+          <h3 class="font-semibold mb-2">Email 3 — Hard Push</h3>
+          <p class="text-sm">Send: <strong>Monday early afternoon</strong> (1–3pm inbox window). Goal: hit lunch/prime browsing time with persuasive copy and repeated CTAs.</p>
+        </div>
+        <div class="p-4 bg-[#f6f4ef] rounded-lg shadow-sm">
+          <h3 class="font-semibold mb-2">Email 4 — Last Call</h3>
+          <p class="text-sm">Send: <strong>Monday evening (4–5 hours before midnight)</strong>. Goal: broad reminder to non-purchasers with urgency and the highest-value offers (bundles, subscription perks).</p>
+        </div>
+        <div class="md:col-span-2 p-4 bg-[#f6f4ef] rounded-lg shadow-sm">
+          <h3 class="font-semibold mb-2">Email 5 — Extension</h3>
+          <p class="text-sm">Send: <strong>Tuesday morning</strong>. Frame: a customer-requested 12-hour extension for late buyers. This captures final conversions while preserving the original deadline's urgency.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design & Copy Approach -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Design & Copy Approach</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Design:</strong> Minimal, premium aesthetic — neutral Fiihii beige with earthy green accents, large readable type, uncluttered modules that translate cleanly to MJML.</li>
+        <li><strong>Copy:</strong> Brand-forward, human tone focused on routine, convenience, and trust. Messaging evolved across the sequence: curiosity → value → urgency → friendly second-chance.</li>
+        <li><strong>Dev constraints:</strong> Simplified Figma visuals to avoid complex SVG/icon issues in inboxes. Replaced complex icons with strong CTA modules where needed for inbox safety and consistent rendering.</li>
+        <li><strong>Deliverability:</strong> Engagement-first send strategy (teaser segmentation + suppression) to protect sending reputation and target highest-likelihood buyers first.</li>
+      </ul>
+    </section>
+
+    <!-- Screenshots -->
+    <section x-data="{
+        open: false,
+        imgIndex: 0,
+        images: [
+          'images/fiihii/teaser email.png',
+          'images/fiihii/launch email.png',
+          'images/fiihii/hard push.png',
+          'images/fiihii/last chance.png',
+          'images/fiihii/extension email.png'
+        ],
+        get imgSrc() { return this.images[this.imgIndex]; },
+        next() { this.imgIndex = (this.imgIndex + 1) % this.images.length; },
+        prev() { this.imgIndex = (this.imgIndex - 1 + this.images.length) % this.images.length; }
+      }"
+      x-init="
+        window.addEventListener('keydown', e => {
+          if (open) {
+            if (e.key === 'Escape') open = false;
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+          }
+        })
+      "
+      class="py-8">
+
+      <h2 class="text-2xl font-semibold mb-6">Screenshots (mobile-first email renders)</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <template x-for="(src, index) in images" :key="index">
+          <div class="overflow-hidden rounded-lg shadow-md cursor-pointer"
+            @click="imgIndex = index; open = true">
+            <img :src="src" :alt="'Screenshot ' + (index + 1)"
+              class="object-cover w-full h-56 hover:scale-105 transition-transform duration-300">
+          </div>
+        </template>
+      </div>
+
+      <!-- Lightbox -->
+      <div x-show="open"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+        @click.self="open = false"
+        x-transition.opacity>
+        <div class="relative max-w-[95vw]">
+          <img :src="imgSrc" alt="Screenshot Preview"
+            class="max-h-[85vh] max-w-[85vw] rounded-lg shadow-lg">
+          <button @click.stop="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&larr;</button>
+          <button @click.stop="next()" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl font-bold px-2">&rarr;</button>
+          <button @click="open=false" class="absolute top-2 right-2 text-white text-3xl font-bold px-2">&times;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown demo (editable) -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Countdown (live-timer demo)</h2>
+      <p class="text-sm text-gray-700 mb-4">I included a small client-side countdown you can set to the final extension deadline. For production you can swap for an ESP-safe animated image or use a service that returns a live GIF for inbox compatibility.</p>
+
+      <div class="max-w-lg mx-auto bg-white/70 p-6 rounded-lg text-center">
+        <!--
+          Edit the data-target value below to the final target datetime you want the timer to count down to.
+          Format: YYYY-MM-DDTHH:MM:SS
+          Example: data-target="2025-12-09T23:59:00"
+        -->
+        <div id="fiihii-countdown" data-target="2025-12-09T23:59:00" class="space-y-4">
+          <div class="text-sm text-gray-600">Sale extension ends in</div>
+          <div class="text-4xl font-bold" id="fiihii-timer">--:--:--</div>
+          <a href="#" class="inline-block mt-2 bg-emerald-600 text-white px-6 py-2 rounded-full shadow">Claim the Bonus</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results & developer notes -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Implementation Notes</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>All templates were designed mobile-first and coded in MJML for consistent, inlined HTML delivery.</li>
+        <li>Complex decorative elements were simplified to ensure deliverability across major clients (Gmail, Outlook, Apple Mail).</li>
+        <li>Where clients do not support live timers reliably, a server-generated GIF timer is recommended for the final build (ESP-compatible approach).</li>
+        <li>Files are production-ready — rename or host images in your ESP as needed and drop the HTML into Klaviyo/Mailchimp templates.</li>
+      </ul>
+
+      <p class="mt-4">
+        <strong>Project highlight:</strong> A complete, end-to-end Cyber Monday email suite that balances design, copy, and deliverability strategy — ready for deployment.
+      </p>
+    </section>
+
+    <!-- Code & repo -->
+    <section class="max-w-3xl mx-auto p-6 mt-12 text-left border-t border-gray-300">
+      <h2 class="text-2xl font-semibold mb-2">View the code</h2>
+      <p class="text-gray-700 mb-4">Open the repo to see MJML templates, production HTML, image assets, and implementation notes.</p>
+      <a href="https://github.com/e-odacre/fiihii-email-campaign" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-2 rounded-lg shadow hover:bg-gray-800 transition-colors duration-200"
+        aria-label="Open project repository on GitHub">
+        <!-- GitHub SVG -->
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.2 9.13 7.64 10.61.56.1.76-.24.76-.53 0-.26-.01-1-.02-1.96-3.11.68-3.77-1.34-3.77-1.34-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.16-3.01-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.12 1.15a10.76 10.76 0 012.84-.38c.96.01 1.93.13 2.84.38 2.17-1.45 3.12-1.15 3.12-1.15.61 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.01 0 4.29-2.62 5.24-5.11 5.51.4.35.76 1.04.76 2.1 0 1.52-.01 2.75-.01 3.12 0 .29.2.64.77.53A11.26 11.26 0 0023.25 11.75C23.25 5.48 18.27.5 12 .5z"/>
+        </svg>
+        View on GitHub
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#fffdf7] border-t mt-12 p-4 text-center text-gray-500 text-sm">
+    © 2025 Evan O'Dacre
+  </footer>
+
+  <!-- Countdown script -->
+  <script>
+    (function () {
+      const container = document.getElementById('fiihii-countdown');
+      if (!container) return;
+      // Target is stored in data-target attribute for easy editing.
+      const targetStr = container.getAttribute('data-target') || '';
+      let target = new Date(targetStr);
+      if (isNaN(target)) {
+        // Fallback: 24 hours from now
+        target = new Date(Date.now() + 24 * 60 * 60 * 1000);
+      }
+
+      function pad(n){ return String(n).padStart(2,'0'); }
+
+      function update() {
+        const now = new Date();
+        const diff = target - now;
+        const el = document.getElementById('fiihii-timer');
+        if (!el) return;
+        if (diff <= 0) {
+          el.textContent = "00:00:00";
+          clearInterval(timerId);
+          return;
+        }
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        el.textContent = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+      }
+
+      update();
+      const timerId = setInterval(update, 1000);
+    })();
+  </script>
+</body>
+</html>
