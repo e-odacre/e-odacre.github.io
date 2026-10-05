@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Email Library | Evan O'Dacre</title>
+  <meta name="description" content="A modular email production system for building, validating, and exporting branded Klaviyo-ready emails.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fffdf7] text-gray-800 font-sans">
+  <header class="bg-[#fffdf7] shadow-sm p-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="index.html#work" class="text-gray-900 underline hover:text-black block mb-4">← Back to portfolio</a>
+      <h1 class="text-3xl font-bold">Modular Email Library</h1>
+      <p class="text-gray-700 mt-3 text-lg">A modular email production system for building, validating, and exporting branded Klaviyo-ready emails.</p>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+    <p class="bg-[#f6f4ef] p-4 rounded-lg text-sm leading-relaxed">Internal production workspace — local coding-agent workflow, with manual HTML handoff to Klaviyo.</p>
+    <section><h2 class="text-2xl font-semibold mb-4">Problem</h2><p class="leading-relaxed">Building branded emails from scratch repeats design and development work. It also makes consistency and production checks harder to maintain across campaigns.</p></section>
+    <section><h2 class="text-2xl font-semibold mb-4">Approach</h2><p class="leading-relaxed">I separated brand identity, content, and presentation into reusable tokens, components, variants, layouts, sections, recipes, and templates. A Laravel workspace organizes brands, emails, components, recipes, and builds.</p><div class="bg-[#fefaf1] p-4 rounded-lg mt-4"><p class="text-sm font-semibold mb-2">Workflow</p><p class="leading-relaxed">Campaign brief → Brand & recipe → Agent-assisted build → MJML → Validate → Preview → Export</p></div></section>
+    <section><h2 class="text-2xl font-semibold mb-4">What I built</h2><ul class="list-disc pl-5 space-y-3"><li>Reusable components, campaign recipes, themes, and brand systems, including a dedicated SanEcoTec email collection.</li>
+<li>A brief-to-build workflow: choose a brand, recipe, and style; describe the campaign; generate a prompt; use a local coding agent to produce a structured build.</li>
+<li>Automatic build discovery, searchable emails, desktop/mobile previews, warnings, downloads, and brand-specific organization.</li>
+<li>A Nunjucks-to-MJML rendering pipeline with strict compilation and HTML export that preserves Klaviyo template tags.</li>
+<li>Validation for component schemas, registry constraints, MJML compilation, template tags, image alt text, email size, Gmail clipping warnings, brand references, and draft isolation. Automated tests cover the engine and Laravel integration.</li></ul></section>
+    <section><h2 class="text-2xl font-semibold mb-4">Why it matters</h2><p class="leading-relaxed">Reusable structures reduce repeated production work, while validation helps catch issues before an email reaches the platform. Campaign content can change without rebuilding the brand system each time.</p></section>
+    <section><h2 class="text-2xl font-semibold mb-4">Technology</h2><p class="leading-relaxed">Laravel, PHP, Node.js, Nunjucks, MJML, Tailwind, JavaScript, and Vite.</p></section>
+    <section><h2 class="text-2xl font-semibold mb-4">What was produced</h2><p class="leading-relaxed">Created a reusable workspace for producing validated, branded, responsive email HTML. The output is exported for manual import into Klaviyo; the system does not send campaigns or provide automated Klaviyo delivery. AI assistance comes from a local coding agent, rather than an AI API or SaaS product.</p></section>
+    <section class="border-t pt-6"><h2 class="text-xl font-semibold mb-3">Let's talk</h2><a href="mailto:evanodacre@gmail.com" class="text-blue-700 underline">evanodacre@gmail.com</a></section>
+  </main>
+  <footer class="bg-[#fffdf7] border-t mt-12 p-4 text-center text-gray-500 text-sm">© 2026 Evan O'Dacre</footer>
+</body>
+</html>
