@@ -8,6 +8,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#fffdf7] text-gray-800 font-sans">
+  <nav aria-label="Main navigation" class="max-w-3xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
+    <a href="index.html" aria-current="page" class="text-gray-900 underline hover:text-black">Home</a>
+    <a href="index.html#work" class="text-gray-900 underline hover:text-black">Selected work</a>
+    <a href="email-designs.html" class="text-gray-900 underline hover:text-black">Email designs</a>
+    <a href="index.html#contact" class="text-gray-900 underline hover:text-black">Contact</a>
+  </nav>
   <header class="bg-[#fffdf7] shadow-sm p-6">
     <div class="max-w-3xl mx-auto text-center">
       <p class="text-lg font-semibold">Evan O'Dacre</p>
@@ -51,13 +57,9 @@
     </section>
     <section id="work" class="text-center" aria-labelledby="selected-work">
       <h2 id="selected-work" class="text-2xl font-semibold mb-4">Selected work</h2>
-      <p class="leading-relaxed mb-6">Client campaigns and tools I've built to connect marketing with practical implementation.</p>
+      <p class="leading-relaxed mb-4">Email campaigns, production tools, and the systems behind the marketing.</p>
+      <a href="email-designs.html" class="inline-block text-gray-900 underline mb-6">Browse all email designs →</a>
       <div class="space-y-6 text-left">
-        <article class="bg-white/70 p-4 rounded-md shadow-sm hover:shadow-lg transition-shadow">
-          <p class="text-sm text-gray-600 mb-2">Marketing operations · Development project</p>
-          <h3 class="text-xl font-semibold mb-2"><a href="agency.html" class="text-gray-900 underline decoration-2 hover:text-black">Agency</a></h3>
-          <p class="text-gray-700">A platform connecting prospect research, qualification, outreach, tailored website demos, and client delivery in one workflow. Built to bring fragmented sales and agency tasks together.</p>
-        </article>
         <article class="bg-white/70 p-4 rounded-md shadow-sm hover:shadow-lg transition-shadow">
           <p class="text-sm text-gray-600 mb-2">Email production · Development project</p>
           <h3 class="text-xl font-semibold mb-2"><a href="modular-email-library.html" class="text-gray-900 underline decoration-2 hover:text-black">Modular Email Library</a></h3>
@@ -72,6 +74,11 @@
           <p class="text-sm text-gray-600 mb-2">Web development & email · Client work</p>
           <h3 class="text-xl font-semibold mb-2"><a href="sanecotec.html" class="text-gray-900 underline decoration-2 hover:text-black">Sanecotec</a></h3>
           <p class="text-gray-700">Laravel website pages with database-driven filtering, plus two responsive emails used for a workshop promotion and follow-up.</p>
+        </article>
+        <article class="bg-white/70 p-4 rounded-md shadow-sm hover:shadow-lg transition-shadow">
+          <p class="text-sm text-gray-600 mb-2">Marketing operations · Development project</p>
+          <h3 class="text-xl font-semibold mb-2"><a href="agency.html" class="text-gray-900 underline decoration-2 hover:text-black">Agency</a></h3>
+          <p class="text-gray-700">A platform connecting prospect research, qualification, outreach, tailored website demos, and client delivery in one workflow. Built to bring fragmented sales and agency tasks together.</p>
         </article>
         <article class="bg-white/70 p-4 rounded-md shadow-sm hover:shadow-lg transition-shadow">
           <p class="text-sm text-gray-600 mb-2">Website production & human QA</p>
