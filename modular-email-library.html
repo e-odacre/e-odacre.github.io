@@ -7,6 +7,8 @@
   <meta name="description" content="A modular email production system for building, validating, and exporting branded Klaviyo-ready emails.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="project-story.css">
+  <script src="project-story.js" defer></script>
 </head>
 <body class="bg-[#fffdf7] text-gray-800 font-sans">
   <header class="bg-[#fffdf7] shadow-sm p-6">
@@ -14,20 +16,29 @@
       <a href="index.html#work" class="back-link mb-4">Back to portfolio</a>
       <h1 class="text-3xl font-bold">Modular Email Library</h1>
       <p class="text-gray-700 mt-3 text-lg">A modular email production system for building, validating, and exporting branded Klaviyo-ready emails.</p>
+      <a href="email-builder.html" class="inline-block mt-5 bg-[#294e42] text-white px-5 py-3 rounded-md">Try the interactive demo ↗</a>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto p-6 space-y-12">
-    <section class="bg-[#e9eddf] p-6 rounded-lg" aria-labelledby="try-demo">
-      <a href="email-builder.html#demo" class="block mb-5 rounded-md overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="Try the email builder">
-        <img src="images/email-builder-preview.png" alt="Email builder with editable campaign fields alongside a branded Fieldwork email preview" class="w-full h-72 sm:h-96 object-cover object-[center_65%]" width="1440" height="1320">
-      </a>
-      <h2 id="try-demo" class="text-2xl font-semibold mb-3">Build a sample email</h2>
-      <p class="leading-relaxed mb-4">Choose a welcome or product-launch recipe, customize the copy and brand color, preview it on mobile, and download the HTML. A simplified browser demo of the ideas behind the full library.</p>
-      <a href="email-builder.html#demo" class="inline-block bg-[#294e42] text-white px-5 py-3 rounded-md">Try the email builder →</a>
-    </section>
+  <main class="project-main mx-auto p-6 space-y-12">
+    <section class="workspace-hero" aria-label="Production workspace overview"><figure class="screen-figure"><a class="screen-link" href="images/modular-email-library/overview.png" data-screenshot aria-label="Enlarge the workspace overview"><img src="images/modular-email-library/overview.png" width="1600" height="990" fetchpriority="high" alt="Modular email workspace with twelve recipes, 116 components, brand collections, and a prepare, build, review workflow"></a><figcaption><span>The actual production workspace. Brief → agent → review → export.</span><span class="enlarge-hint" aria-hidden="true">Click to enlarge ↗</span></figcaption></figure></section>
+
     <p class="bg-[#f6f4ef] p-4 rounded-lg text-sm leading-relaxed">Internal production workspace — local coding-agent workflow, with manual HTML handoff to Klaviyo.</p>
     <section><h2 class="text-2xl font-semibold mb-4">Problem</h2><p class="leading-relaxed">Building branded emails from scratch repeats design and development work. It also makes consistency and production checks harder to maintain across campaigns.</p></section>
     <section><h2 class="text-2xl font-semibold mb-4">Approach</h2><p class="leading-relaxed">I separated brand identity, content, and presentation into reusable tokens, components, variants, layouts, sections, recipes, and templates. A Laravel workspace organizes brands, emails, components, recipes, and builds.</p><div class="bg-[#fefaf1] p-4 rounded-lg mt-4"><p class="text-sm font-semibold mb-2">Workflow</p><p class="leading-relaxed">Campaign brief → Brand & recipe → Agent-assisted build → MJML → Validate → Preview → Export</p></div></section>
+    <section class="screens-section" aria-labelledby="screens-title">
+      <div class="screens-intro"><p class="section-kicker">Inside the actual tool</p><h2 id="screens-title">From a clear brief to an email ready for review.</h2><p>Three screens from the local application, showing the decisions behind the workflow. Select any screenshot to take a closer look.</p></div>
+      <article class="workflow-shot"><div class="shot-heading"><span class="shot-number">01</span><div><h3>Start with the campaign context.</h3><p>Choose a brand, recipe, and style, then define the audience, objective, and approved content. The workspace prepares instructions for a local coding agent.</p></div></div><figure class="screen-figure"><a class="screen-link" href="images/modular-email-library/brief.png" data-screenshot aria-label="Enlarge the campaign brief"><img src="images/modular-email-library/brief.png" width="1600" height="990" loading="lazy" decoding="async" alt="Campaign brief form showing brand, welcome email recipe, style, audience and content fields alongside agent-handoff requirements"></a><figcaption><span><strong>Design decision:</strong> Keep the brief and handoff requirements together, so the build starts with context.</span><span class="enlarge-hint" aria-hidden="true">Enlarge ↗</span></figcaption></figure></article>
+      <article class="workflow-shot"><div class="shot-heading"><span class="shot-number">02</span><div><h3>Reuse the structure. Change the campaign.</h3><p>Searchable components, category filters, and rendered previews make reusable blocks easier to find. Variants offer different treatments without rebuilding the underlying component.</p></div></div><figure class="screen-figure"><a class="screen-link" href="images/modular-email-library/components.png" data-screenshot aria-label="Enlarge the component library"><img src="images/modular-email-library/components.png" width="1600" height="990" loading="lazy" decoding="async" alt="Email component library with search, category and style filters, rendered block thumbnails and variant counts"></a><figcaption><span><strong>Design decision:</strong> Show the rendered block alongside its purpose and variants. These previews use example content.</span><span class="enlarge-hint" aria-hidden="true">Enlarge ↗</span></figcaption></figure></article>
+      <article class="workflow-shot"><div class="shot-heading"><span class="shot-number">03</span><div><h3>Keep checks next to the email.</h3><p>Desktop and phone previews sit beside renderer diagnostics, HTML size, and export actions. This recipe preview shows a reusable starting point; agent-produced builds use the same review flow.</p></div></div><figure class="screen-figure"><a class="screen-link" href="images/modular-email-library/review.png" data-screenshot aria-label="Enlarge the preview and export screen"><img src="images/modular-email-library/review.png" width="1600" height="990" loading="lazy" decoding="async" alt="Welcome recipe preview with desktop and phone controls, checks-passed status, HTML size, diagnostics and HTML download"></a><figcaption><span><strong>Design decision:</strong> Review the output and diagnostics in one place. Placeholder imagery and Klaviyo personalization tags are intentional in this example.</span><span class="enlarge-hint" aria-hidden="true">Enlarge ↗</span></figcaption></figure></article>
+    </section>
+    <section class="demo-card bg-[#e9eddf] rounded-lg" aria-labelledby="try-demo">
+      <a href="email-builder.html#demo" class="demo-preview block mb-5 rounded-md overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" aria-label="Try the email builder">
+        <img src="images/email-builder-preview.png" alt="Email builder with editable campaign fields alongside a branded Fieldwork email preview" class="w-full h-72 sm:h-96 object-cover object-[center_65%]" width="1440" height="1320">
+      </a>
+      <div class="demo-copy"><p class="section-kicker">Try it yourself</p><h2 id="try-demo" class="text-2xl font-semibold mb-3">Build a sample email</h2>
+      <p class="leading-relaxed mb-4">Choose a welcome or product-launch recipe, customize the copy and brand color, preview it on mobile, and download the HTML. A simplified browser demo of the ideas behind the full library.</p>
+      <p class="demo-note">This public demo uses browser-side HTML templates and basic checks. It illustrates the workflow without running the full MJML engine.</p><a href="email-builder.html#demo" class="inline-block bg-[#294e42] text-white px-5 py-3 rounded-md">Try the email builder →</a>
+      </div></section>
     <section><h2 class="text-2xl font-semibold mb-4">What I built</h2><ul class="list-disc pl-5 space-y-3"><li>Reusable components, campaign recipes, themes, and brand systems, including a dedicated SanEcoTec email collection.</li>
 <li>A brief-to-build workflow: choose a brand, recipe, and style; describe the campaign; generate a prompt; use a local coding agent to produce a structured build.</li>
 <li>Automatic build discovery, searchable emails, desktop/mobile previews, warnings, downloads, and brand-specific organization.</li>
@@ -39,5 +50,6 @@
     <section class="border-t pt-6"><h2 class="text-xl font-semibold mb-3">Let's talk</h2><a href="mailto:evanodacre@gmail.com" class="text-blue-700 underline">evanodacre@gmail.com</a></section>
   </main>
   <footer class="bg-[#fffdf7] border-t mt-12 p-4 text-center text-gray-500 text-sm">© 2026 Evan O'Dacre</footer>
+  <dialog id="screenshot-viewer" class="screenshot-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">Workspace screenshot</h2><button type="button" id="close-viewer" autofocus>Close <span aria-hidden="true">×</span></button></div><p id="viewer-description" class="viewer-description"></p><div class="viewer-image-wrap"><img id="viewer-image" alt=""></div><a id="original-image" class="viewer-original" target="_blank" rel="noopener">Open full-resolution image ↗</a></dialog>
 </body>
 </html>
