@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Try the Email Builder | Evan O'Dacre</title>
+  <meta name="description" content="Try a simplified email builder: customize a campaign, preview it on mobile, and download the HTML.">
+  <link rel="stylesheet" href="email-builder.css">
+  <script src="email-builder.js" defer></script>
+</head>
+<body>
+  <header class="page-header"><a href="modular-email-library.html">← Project story</a><a href="index.html">Evan O'Dacre <span>/ Marketing engineer</span></a></header>
+  <main>
+    <section class="intro"><p class="eyebrow">Modular Email Library · Interactive demo</p><h1>A campaign idea.<br>A ready-to-preview email.</h1><p>Choose a recipe, make it yours, and see how reusable pieces become a branded email.</p></section>
+    <section id="demo" class="workbench" aria-label="Interactive email builder">
+      <form id="builder" class="controls">
+        <div class="panel-heading"><span class="eyebrow">01 / Compose</span><button type="reset" class="text-button">Reset</button></div>
+        <label for="recipe">Campaign recipe</label><select id="recipe" name="recipe"><option value="welcome">Welcome a new subscriber</option><option value="launch">Launch a new product</option></select>
+        <p id="recipe-note" class="hint"></p>
+        <div class="field-row"><div><label for="brand">Brand name</label><input id="brand" name="brand" maxlength="45" value="Fieldwork"></div><div class="color-field"><label for="accent">Color</label><input id="accent" name="accent" type="color" value="#294e42"></div></div>
+        <label for="subject">Subject line</label><input id="subject" name="subject" maxlength="120">
+        <label for="preheader">Preview text</label><input id="preheader" name="preheader" maxlength="160">
+        <label for="headline">Headline</label><input id="headline" name="headline" maxlength="100">
+        <label for="message">Message</label><textarea id="message" name="message" rows="3" maxlength="600"></textarea>
+        <div class="field-row"><div><label for="cta">Button text</label><input id="cta" name="cta" maxlength="45"></div><div><label for="offer">Offer or highlight</label><input id="offer" name="offer" maxlength="60"></div></div>
+        <label for="url">Button destination</label><input id="url" name="url" type="url" value="https://example.com" maxlength="500"><p class="hint">Use an https:// link. The starter address is a placeholder.</p>
+        <label class="toggle"><input id="benefits" name="benefits" type="checkbox" checked> Include a benefits section</label>
+      </form>
+      <div class="preview-panel">
+        <div class="preview-toolbar"><span class="eyebrow">02 / Preview</span><div class="device-switch" role="group" aria-label="Preview width"><button type="button" data-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-device="mobile" aria-pressed="false">Mobile</button></div></div>
+        <div class="inbox"><span class="avatar">F</span><div><strong id="sender"></strong><p id="inbox-subject"></p><p id="inbox-preheader" class="hint"></p></div><span class="inbox-label">Preview</span></div>
+        <div class="preview-stage"><iframe id="email-preview" title="Your email preview" sandbox="" referrerpolicy="no-referrer"></iframe></div>
+        <div class="export-bar"><div><strong>Your version, ready to explore.</strong><p class="hint">Downloads the HTML shown in this preview.</p></div><button id="download" type="button" class="primary-button">Download HTML ↓</button></div>
+      </div>
+    </section>
+    <section class="below-demo"><div><p class="eyebrow">03 / Review</p><h2>A few checks before handoff.</h2><ul id="checks" aria-live="polite"></ul><p id="download-status" role="status"></p></div><div><p class="eyebrow">Why these pieces?</p><h2>Structure with a purpose.</h2><p id="decision"></p><p>Brand color carries through the button and accents. Optional benefits add supporting detail without rebuilding the layout.</p></div></section>
+    <aside class="scope-note"><strong>A small window into the full system.</strong><p>This demo uses browser-side HTML templates inspired by the library's welcome and product-launch recipes. The full workspace uses Laravel, Nunjucks and MJML, with schema checks, strict compilation and Klaviyo template-tag preservation. The checks here cover copy, links, color contrast and output size; they do not run that engine or verify inbox compatibility. Sample brand and copy are fictional.</p><a href="modular-email-library.html">See how the production system works →</a></aside>
+    <noscript><p>Enable JavaScript to customize and preview the sample email.</p></noscript>
+  </main>
+  <footer>Built by Evan O'Dacre · <a href="mailto:evanodacre@gmail.com">Let's talk</a></footer>
+</body>
+</html>
