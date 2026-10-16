@@ -1,0 +1,46 @@
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid #c5d0c4;
+  border-radius: 999px;
+  background: #e9eddf;
+  color: #294e42;
+  font: 600 13px/1.4 system-ui, -apple-system, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 2px 5px #24352d08;
+  transition: background-color .15s, border-color .15s, box-shadow .15s;
+}
+.back-link::before {
+  content: "←";
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #294e42;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+}
+.back-link:hover {
+  background: #dce5d4;
+  border-color: #8ca18a;
+  color: #203e34;
+  text-decoration: none;
+  box-shadow: 0 3px 9px #24352d12;
+}
+.back-link:focus-visible {
+  outline: 3px solid #b46824;
+  outline-offset: 4px;
+}
+.page-header { align-items: center; }
+@media (max-width: 480px) {
+  .page-header { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-link { transition: none; }
+}
